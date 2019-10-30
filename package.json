@@ -1,9 +1,22 @@
 {
   "name": "foodizo",
-  "version": "0.0.0",
+  "private": true,
+  "version": "0.0.1",
   "description": "Foodizo is an open source visual food tracker",
   "main": "index.js",
   "repository": "https://github.com/foodizo/foodizo.git",
   "author": "Richard Borcsik <borcsikrichard@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "workspaces": {
+    "packages": [
+      "@foodizo/*"
+    ],
+    "nohoist": [
+      "**/react-native",
+      "**/react-native/**",
+      "**/react-native-web/**",
+      "**/expo/**",
+      "app/**"
+    ]
+  }
 }
